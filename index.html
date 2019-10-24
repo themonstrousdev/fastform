@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FastForm</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./styles/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.themonster.xyz/styles/google-fonts.css">
+  <link rel="stylesheet" href="https://www.themonster.xyz/styles/fancy-fonts.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <!-- decor -->
+  <div class="styleBox"></div>
+  <div class="container-fluid bg-transparent py-2 px-5 move-front">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg flex-fill">
+        <a class="navbar-brand" href="#">
+          <h1 class="text-purple">FastForm</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fas fa-bars d-flex flex-column justify-content-center"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item rounded active">
+              <a class="nav-link text-maroon" href="#">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item rounded">
+              <a class="nav-link text-maroon" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item rounded dropdown">
+              <a class="nav-link dropdown-toggle text-maroon" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Applications
+              </a>
+              <div class="dropdown-menu bg-cusWhite box-shadow" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-maroon" href="./drivers-license">Driver's License</a>
+                <a class="dropdown-item disabled" href="#">Business Permit</a>
+                <a class="dropdown-item disabled" href="#">Vehicle Registration</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <div class="dropdown">
+          <button type="button" class="btn btn-outline-dark border-0 fas fa-user-circle m-2 py-2" type="button" id="accountDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu dropdown-menu-right bg-cusWhite" aria-labelledby="accountDrop">
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Account Settings</a>
+              <a class="dropdown-item" href="#">Applications</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-danger" href="#"><span class="fas fa-sign-out-alt mr-2"></span> Log Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="container-fluid bg-transparent py-5 px5">
+    <div class="row drop-shadow">
+      <div id="runningMan" class="position-relative col-md-6 col-sm-12"></div>
+      <div class="col-md-6 col-sm-12"></div>
+    </div>
+  </div>
+  
+
+
+
+  <!-- SCRIPTS -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="./scripts/lib/jquery-3.4.1.min.js"></script>
+  <script src="./scripts/lib/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="./scripts/lib/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="./scripts/lib/font-awesome.js" crossorigin="anonymous"></script>
+  <!-- <script src="./scripts/main.js"></script> -->
+</body>
+
+</html>
