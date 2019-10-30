@@ -1,10 +1,30 @@
 /* Patua One [Header], Sintony [Text] */
 
+@font-face {
+   font-family: 'Storm'; 
+   src: url('../assets/fonts/STOREB__.TTF') format('truetype');
+}
+
+@font-face {
+   font-family: 'Run'; 
+   src: url('../assets/fonts/Run-6YeWA.ttf') format('truetype')
+}
+
 :root {
+  --dark-purple: #251727;
   --purple: #4e2e54;
   --maroon: #954f75;
   --peach: #f8dac3;
   --cusWhite: #f8f4e9;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.text-dark-purple {
+  color: var(--dark-purple) !important;
 }
 
 .text-purple {
@@ -23,6 +43,10 @@
   color: var(--cusWhite) !important;
 }
 
+.bg-dark-purple {
+  background-color: var(--dark-purple) !important;
+}
+
 .bg-purple {
   background-color: var(--purple) !important;
 }
@@ -37,6 +61,14 @@
 
 .bg-cusWhite {
   background-color: var(--cusWhite) !important;
+}
+
+.btn-primary {
+  background-color: var(--purple) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-purple) !important;
 }
 
 .dropdown-menu.bg-cusWhite {
@@ -54,9 +86,19 @@
   transition: all 200ms ease-in-out;
 }
 
-.nav-item:hover,
+.nav-item.active a {
+  width: fit-content;
+  color: var(--purple) !important;
+  border-bottom: 1px solid currentColor;
+}
+
+.nav-item:not(.disabled):hover,
 .nav-item.show {
   background-color: rgba(248, 218, 195, 0.5);
+}
+
+.nav-item.disabled a {
+  color: rgba(149, 79, 117, 0.4) !important;
 }
 
 .dropdown-menu.bg-cusWhite .dropdown-item:hover {
@@ -79,8 +121,16 @@
   border-color: var(--cusWhite) !important;
 }
 
+.box-sizing-border {
+  box-sizing: border-box;
+}
+
 .box-shadow {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2) !important;
+}
+
+.box-shadow-dark {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5) !important;
 }
 
 .drop-shadow {
@@ -93,25 +143,88 @@
 
 .move-front {
   position: relative;
-  z-index: 99;
+  z-index: 1;
 }
 
 .text-strike {
   text-decoration: line-through;
 }
 
-.styleBox {
-  position: absolute;
-  top: 3vh;
-  left: 3vh;
-  height: 95vh;
-  width: 60vw;
+h1, h2, h3, h4 {
+  font-family: "Patua One", sans-serif;
+}
+
+.slant {
   background: var(--cusWhite);
   -webkit-mask: linear-gradient(3deg, transparent 10%, black 5%);
 }
 
-h1, h2, h3, h4 {
-  font-family: "Patua One", sans-serif;
+.dotted {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(75%, -50%);
+  height: 50%;
+  width: 50%;
+  background: var(--peach);
+  -webkit-mask: url(../assets/polka.png) top left/auto 100% no-repeat;
+}
+
+.run {
+  font-family: "Run", sans-serif;
+}
+
+.storm {
+  font-family: "Storm", sans-serif;
+}
+
+.patua {
+  font-family: "Patua One", serif;
+}
+
+.transx-neg-25 {
+  transform: translateX(-25%);
+}
+
+.transx-neg-50 {
+  transform: translateX(-50%);
+}
+
+.transx-neg-75 {
+  transform: translateX(-75%);
+}
+
+.transx-neg-100 {
+  transform: translateX(-100%);
+}
+
+.transx-25 {
+  transform: translateX(25%);
+}
+
+.transx-50 {
+  transform: translateX(50%);
+}
+
+.transx-75 {
+  transform: translateX(75%);
+}
+
+.transx-100 {
+  transform: translateX(100%);
+}
+
+.img-fluid-h {
+  max-height: 100%;
+  width: auto;
+}
+
+footer a {
+  color: var(--cusWhite) !important;
+}
+
+footer a:hover {
+  color: var(--peach) !important;
 }
 
 #requirements,
@@ -135,6 +248,14 @@ h1, h2, h3, h4 {
   transform: translate(0, -50%);
   font-weight: bold;
   font-family: "Patua One", sans-serif;
+}
+
+.form-control[type="search"] {
+  transition: all 200ms ease-in-out;
+}
+
+.form-control[type="search"]:focus {
+  box-shadow: 0 2px 0px var(--dark-purple);
 }
 
 form#app {
@@ -165,6 +286,9 @@ form#app .form-group label:hover {
   mask-size: contain;
   mask-position: center;
   mask-repeat: no-repeat;
+}
+
+.run-anim {
   opacity: 0;
   transform: translateX(-50%);
   animation: run 800ms cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards 500ms;
@@ -179,4 +303,46 @@ form#app .form-group label:hover {
 
 button#accountDrop {
   font-size: 1.22rem;
+}
+
+.no-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.no-list li {
+  margin-top: .3rem !important;
+}
+
+.imgInpt {
+  cursor: pointer;
+}
+
+.imgInpt::after {
+  content: "Change Profile Picture";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 130%;
+  font-weight: bold;
+  opacity: 0; 
+  transition: all 200ms ease-in-out;
+  pointer-events: none;
+}
+
+.imgInpt:hover::after {
+  opacity: 1;
+}
+
+.uploadLogo {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
 }

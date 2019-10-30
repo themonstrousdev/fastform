@@ -1,11 +1,39 @@
 const app = $("#requirements").attr("form"),
     req = $("#requirements"),
     form = $("form#app"),
-    options = form.children(".row");
+    options = form.children(".row"),
+    application = req.length > 0 ? true : false;
 
 $("#hello").onchange = function() {
   console.log($("#hello"));
 }
+
+$(window).on("load",function(){
+  
+
+  $("body").mCustomScrollbar({
+    theme:"minimal",
+    axis: "y"
+  });
+  
+});
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('.imgInpt img').attr('src', e.target.result);
+    }
+    
+    console.log("Changing image...");
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#pfp").change(function() {
+  readURL(this);
+});
 
 function isComplete() {
   let inputs = $("form#app .form-group label"),
@@ -98,7 +126,8 @@ function printReq(obj) {
   }
 }
 
-fetch("./scripts/requirements.json")
+if(application) {
+  fetch("./scripts/requirements.json")
   .then(rec => {
     return rec.json();
   })
@@ -116,3 +145,4 @@ fetch("./scripts/requirements.json")
   // .catch(err => {
   //   console.log(err);
   // })
+}

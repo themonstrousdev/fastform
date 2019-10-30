@@ -4,19 +4,22 @@
       "sp": {
         "type": "file",
         "list": "Valid SP issued at one (1) month and one (1) day from date of application",
-        "label": "Student's Permit"
+        "label": "Student's Permit",
+        "req": true
       },
       "med": {
         "type": "file",
         "list": "Medical Examination Certificates",
-        "label": "Medical Certificate"
+        "label": "Medical Certificate",
+        "req": true
       }
     },
     "Born in the Philippines": {
       "birth": {
         "type": "file",
         "list": "Scan of birth certificate duly authenticated by the Philippine Statistics Authority (PSA)",
-        "label": "Birth Certificate"
+        "label": "Birth Certificate",
+        "req": true
       }
     },
     "Foreign Citizen": {
@@ -24,14 +27,16 @@
         "pass": {
           "type": "file",
           "list": "Scan of Passport with entry of at least one (1) month and visa duration of at least one (1) year from date of application",
-          "label": "Passport"
+          "label": "Passport",
+          "req": true
         }
       },
       "Optional": {
         "drive": {
           "type": "file",
           "list": "Scan of Foreign Driver's License (or official English translation from the Embassy of the issuing country",
-          "label": "Driver's License (English)"
+          "label": "Driver's License (English)",
+          "req": false
         }
       }
     }

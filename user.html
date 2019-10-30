@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FastForm</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.themonster.xyz/styles/google-fonts.css">
+  <link rel="stylesheet" href="https://www.themonster.xyz/styles/fancy-fonts.css">
+  <link rel="stylesheet" href="./scripts/lib/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+    <div class="container-fluid bg-cusWhite py-2 px-5 move-front drop-shadow">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg flex-fill">
+            <a class="navbar-brand" href="./">
+              <h1 class="text-purple">FastForm</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon fas fa-bars d-flex flex-column justify-content-center"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item rounded">
+                  <a class="nav-link text-maroon" href="./about.html">About</a>
+                </li>
+                <li class="nav-item disabled rounded">
+                  <a class="nav-link disabled" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item rounded dropdown">
+                  <a class="nav-link dropdown-toggle text-maroon" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Apply Now
+                  </a>
+                  <div class="dropdown-menu bg-cusWhite box-shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-maroon" href="./drivers-license.html">Driver's License</a>
+                    <a class="dropdown-item disabled" href="#">Business Permit</a>
+                    <a class="dropdown-item disabled" href="#">Vehicle Registration</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-purple" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              <div class="dropdown">
+              <button type="button" class="btn btn-outline-dark border-0 fas fa-user-circle m-2 py-2" type="button" id="accountDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <div class="dropdown-menu dropdown-menu-right bg-cusWhite" aria-labelledby="accountDrop">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item disabled" href="#">Account Settings</a>
+                  <a class="dropdown-item" href="./applications.html">Applications</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#"><span class="fas fa-sign-out-alt mr-2"></span> Log Out</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+  <div class="container-fluid bg-purple py-5 px5 text-cusWhite">
+    <h1 class="ml-5 pl-5 text-peach">User Profile</h1>
+    <div class="container-fluid">
+      <div class="card-columns">
+        <div class="card card-body bg-dark-purple p-4">
+          <h4 class="card-title">User Information</h4>
+          <div class="row">
+            <div class="col-10 mt-3">
+                <span class="text-maroon font-weight-bold">First Name</span>
+                <span id="fName">Elsie Kathryn</span>
+            </div>
+            <div class="col-10 mt-3">
+              <span class="text-maroon font-weight-bold">Last Name</span>
+              <span id="lName">Tagupa</span>
+            </div>
+            <div class="col-10 mt-3">
+              <span class="text-maroon font-weight-bold">ID Number</span>
+              <span id="idNum">13100055</span>
+            </div>
+            <div class="col-10 mt-3">
+              <span class="text-maroon font-weight-bold">Birthday</span>
+              <span id="bDay">August 21, 1996</span>
+            </div>
+            <div class="col-10 mt-3">
+              <span class="text-maroon font-weight-bold">Age (years)</span>
+              <span id="age">23</span>
+            </div>
+            <div class="col-10 mt-3">
+                <span class="text-maroon font-weight-bold">City Of Residence</span>
+                <span id="age">Cebu City</span>
+              </div>
+          </div>
+        </div>
+        <div class="card card-body p-3 pb-5 bg-dark-purple">
+          <h4 class="card-title">Account Information</h4>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-10 mt-3">
+                <label for="username"><span class="fas fa-user"></span> Username</label>
+                <input value="Ellexide" type="text" name="username" id="username" class="form-control">
+              </div>
+              <div class="col-10 mt-3">
+                <label for="password"><span class="fas fa-key"></span> Password</label>
+                <input value="myPassword" type="password" name="password" id="password" class="form-control">
+              </div>
+              <div class="col-10 mt-3">
+                <label for="email"><span class="fas fa-at"></span> E-mail</label>
+                <input value="ellesea.tagupa@gmail.com" type="email" name="email" id="email" class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-body p-3 bg-dark-purple">
+          <h4 class="card-title">Profile Picture</h4>
+          <label for="pfp" class="imgInpt">
+            <img src="./assets/pfp-placeholder.png" alt="" class="img-fluid">
+            <div class="uploadLogo"><span class="fas fa-upload text-purple"></span></div>
+          </label>
+          <input type="file" name="pfp" id="pfp" class="d-none">
+        </div>
+      </div>
+      <div class="row mt-3">
+          <button type="submit" class="btn btn-success ml-auto mr-5 btn-lg">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer class="container-fluid bg-dark-purple text-cusWhite pt-5 pb-4 px-3">
+      <div class="row">
+        <div class="col-3 ml-5 px-5">
+          <ul class="no-list">
+              <li class="text-bold text-peach mb-2">Resources</li>
+              <li>
+                <a class="my-2" href="./about.html">About Us</a>
+              </li>
+              <li>
+                <a class="my-2" href="#">Contact Us</a>
+              </li>
+              <li>
+                <a href="#" class="my-2">Help & Support</a>
+              </li>
+          </ul>
+        </div>
+        <div class="col-3 ml-5 px-5">
+          <ul class="no-list">
+              <li class="text-bold text-peach mb-2">Developers</li>
+              <li>
+                <a class="my-2" href="#">Alexis Dela Rosa</a>
+              </li>
+              <li>
+                <a class="my-2" href="#">Elsie Kathryn Tagupa</a>
+              </li>
+          </ul>
+        </div>
+        <div class="col-3 ml-auto px-5 d-flex flex-row justify-content-center align-items-center">
+          <span>Made with <span class="fas fa-heart text-danger"></span> by DCIS</span>
+        </div>
+      </div>
+    </footer>
+
+  <!-- SCRIPTS -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="./scripts/lib/jquery-3.4.1.min.js"></script>
+  <script src="./scripts/lib/popper.min.js">
+  </script>
+  <script src="./scripts/lib/bootstrap.min.js">
+  </script>
+  <script src="./scripts/lib/font-awesome.js"></script>
+  <script src="./scripts/lib/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
