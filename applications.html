@@ -13,9 +13,9 @@
   <link rel="stylesheet" href="./scripts/lib/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="./styles/main.css">
 </head>
-<body>
+<body class="bg-cusWhite">
 
-    <div class="container-fluid bg-cusWhite py-2 px-5 move-front">
+    <div class="container-fluid bg-cusWhite py-2 px-5 move-front drop-shadow">
         <div class="row">
           <nav class="navbar navbar-expand-lg flex-fill">
             <a class="navbar-brand" href="./">
@@ -53,7 +53,7 @@
               <div class="dropdown">
               <button type="button" class="btn btn-outline-dark border-0 fas fa-user-circle m-2 py-2" type="button" id="accountDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                 <div class="dropdown-menu dropdown-menu-right bg-cusWhite" aria-labelledby="accountDrop">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="./user.html">Profile</a>
                   <a class="dropdown-item disabled" href="#">Account Settings</a>
                   <a class="dropdown-item" href="#">Applications</a>
                   <div class="dropdown-divider"></div>
@@ -64,7 +64,100 @@
           </nav>
         </div>
       </div>
+      <div class="container-fluid p-5">
+        <h2 class="text-maroon">Your Applications</h2>
+        <div class="col-12 p-3" id="apps">
+          <div class="card">
+            <div class="card-header" id="driver">
+              <h5 class="mb-0">
+                <button class="btn btn-link text-dark-purple collapsed" type="button" data-toggle="collapse" data-target="#driverDet" aria-expanded="true" aria-controls="driverDet">
+                  Driver's License <span class="badge badge-warning">Pending</span>
+                </button>
+              </h5>
+            </div>
+
+            <div id="driverDet" class="collapse" aria-labelledby="driver" data-parent="#apps">
+              <div class="card-body">
+                <p>
+                  Driver's License Application is currently pending. There are no details given.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="business">
+              <h5 class="mb-0">
+                <button class="btn btn-link text-dark-purple collapsed" type="button" data-toggle="collapse" data-target="#businessDet" aria-expanded="true" aria-controls="businessDet">
+                  Driver's License <span class="badge badge-danger">Rejected</span>
+                </button>
+              </h5>
+            </div>
+
+            <div id="businessDet" class="collapse" aria-labelledby="business" data-parent="#apps">
+              <div class="card-body">
+                <p>
+                  Your Business Permit Application was rejected for the following reasons:
+                  <ul class="text-danger">
+                    <li>Your Lessor's Permit is not up to date.</li>
+                    <li>Owner's Name does not match submitter's profile name.</li>
+                  </ul>
+                  Please complete the given requirements and errors before trying again.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+              <div class="card-header" id="car">
+                <h5 class="mb-0">
+                  <button class="btn btn-link text-dark-purple collapsed" type="button" data-toggle="collapse" data-target="#carDet" aria-expanded="true" aria-controls="carDet">
+                    Vehicle Regsistration <span class="badge badge-success">Success</span>
+                  </button>
+                </h5>
+              </div>
   
+              <div id="carDet" class="collapse" aria-labelledby="car" data-parent="#apps">
+                <div class="card-body">
+                  <p>
+                    Please claim your documents at the LTO with <span class="font-weight-bold text-dark-purple">2 government IDs, including your National ID.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <footer class="container-fluid bg-dark-purple text-cusWhite pt-5 pb-4 px-3">
+          <div class="row">
+            <div class="col-3 ml-5 px-5">
+              <ul class="no-list">
+                  <li class="text-bold text-peach mb-2">Resources</li>
+                  <li>
+                    <a class="my-2" href="./about.html">About Us</a>
+                  </li>
+                  <li>
+                    <a class="my-2" href="#">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#" class="my-2">Help & Support</a>
+                  </li>
+              </ul>
+            </div>
+            <div class="col-3 ml-5 px-5">
+              <ul class="no-list">
+                  <li class="text-bold text-peach mb-2">Developers</li>
+                  <li>
+                    <a class="my-2" href="#">Alexis Dela Rosa</a>
+                  </li>
+                  <li>
+                    <a class="my-2" href="#">Elsie Kathryn Tagupa</a>
+                  </li>
+              </ul>
+            </div>
+            <div class="col-3 ml-auto px-5 d-flex flex-row justify-content-center align-items-center">
+              <span>Made with <span class="fas fa-heart text-danger"></span> by DCIS</span>
+            </div>
+          </div>
+        </footer>
 
 
   <!-- SCRIPTS -->
