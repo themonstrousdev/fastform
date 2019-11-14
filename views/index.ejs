@@ -1,0 +1,117 @@
+<% include partial/header %>
+
+<!-- decor -->
+<div class="styleBox position-absolute col-md-8 col-sm-10 mt-3 ml-4 mr-4" style="height: 75vh">
+    <div class="slant position-absolute h-100 w-100"></div>
+    <div class="dotted position-absolute"></div>
+  </div>
+  <div class="container-fluid bg-transparent py-2 px-5 move-front">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg flex-fill">
+        <a class="navbar-brand" href="#">
+          <h1 class="text-purple">FastForm</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fas fa-bars d-flex flex-column justify-content-center"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item rounded">
+              <a class="nav-link text-maroon" href="/about">About</a>
+            </li>
+            <li class="nav-item disabled rounded">
+              <a class="nav-link disabled" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item rounded dropdown">
+              <a class="nav-link dropdown-toggle text-maroon" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Apply Now
+              </a>
+              <div class="dropdown-menu bg-cusWhite box-shadow" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-maroon" href="/drivers-license">Driver's License</a>
+                <a class="dropdown-item disabled" href="#">Business Permit</a>
+                <a class="dropdown-item disabled" href="#">Vehicle Registration</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2 bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-purple" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <div class="dropdown">
+          <button type="button" class="btn btn-outline-dark border-0 fas fa-user-circle m-2 py-2" type="button" id="accountDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu dropdown-menu-right bg-cusWhite" aria-labelledby="accountDrop">
+              <a class="dropdown-item" href="/user">Profile</a>
+              <a class="dropdown-item disabled" href="#">Account Settings</a>
+              <a class="dropdown-item" href="/applications">Applications</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-danger" href="#"><span class="fas fa-sign-out-alt mr-2"></span> Log Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="container-fluid bg-transparent py-5 px-5">
+    <div class="row text-purple">
+        <div class="run-anim drop-shadow position-relative col-md-3 col-sm-12 ml-5">
+            <div id="runningMan"></div>
+          </div>
+      <div class="run-anim col-md-8 col-sm-12 d-flex justify-content-md-center flex-column justify-content-sm-start align-items-md-start align-items-sm-center">
+        <h1 class="storm">Where <span class="text-maroon">Speed</span> Meets <span class="text-maroon">Effeciency</span></h1>
+        <span style="font-size: 110%">We give you the best application experience with the least hassle.</span>
+        <a href="#" class="btn btn-primary btn-lg border-0 mt-3 align-self-center" role="button">Apply Now <span class="fas fa-arrow-right ml-2"></span></a>
+        <div class="position-absolute w-25 h-100 justify-self-center align-self-end transx-neg-25 mt-5 d-none d-lg-block" style="overflow: hidden;">
+          <div class="position-absolute h-auto w-auto transx-25" style="right: 0;">
+              <img src="./assets/stock-girl.webp" class="img-fluid-h rounded" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-dark-purple p-5 mt-5 box-sizing-border text-cusWhite move-front">
+    <h1 class="text-center text-peach">You apply.<br>We'll handle the rest.</h1>
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center m-md-0 m-sm-1">
+          <p>
+            <span class="patua">FastForm</span> allows for quick and easy application for any type of business. It will cater to all kinds of schedules for different types of jobs.
+          </p>
+          <p>
+            It will minimize the lines to follow as well as the offices to go to. Face to face interactions with officials will not be completely eliminated but it will be done only if absolutely necessary.
+          </p>
+          <p>
+            You will get your documents <span class="patua text-peach">anywhere at anytime.</span>
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-12 m-md-0 m-sm-1">
+          <img src="./assets/stock-guy.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-purple p-5 box-sizing-border text-cusWhite">
+    <h1 class="text-center text-peach">We'll keep you updated.</h1>
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 m-md-0 m-sm-1">
+          <img src="./assets/stock-meeting.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center m-md-0 m-sm-1">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quaerat necessitatibus atque ducimus neque placeat fugit? Iusto, illum doloremque molestiae voluptates excepturi neque. Fugiat quos placeat vel earum quasi eos!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat harum odio in eveniet quidem iusto commodi eaque? Laudantium officiis similique autem! Nam quis atque neque, quos numquam dicta facilis sunt?
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis nemo possimus odio dignissimos cumque cum odit aut harum architecto et sapiente ratione neque quas quos, blanditiis at voluptate, repellat quae.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% include partial/footer %>

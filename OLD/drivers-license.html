@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FastForm</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.themonster.xyz/styles/google-fonts.css">
+  <link rel="stylesheet" href="https://www.themonster.xyz/styles/fancy-fonts.css">
+  <link rel="stylesheet" href="./scripts/lib/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+    <div class="container-fluid bg-cusWhite py-2 px-5 move-front drop-shadow">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg flex-fill">
+            <a class="navbar-brand" href="./">
+              <h1 class="text-purple">FastForm</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon fas fa-bars d-flex flex-column justify-content-center"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item rounded">
+                  <a class="nav-link text-maroon" href="./about.html">About</a>
+                </li>
+                <li class="nav-item disabled rounded">
+                  <a class="nav-link disabled" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item rounded dropdown">
+                  <a class="nav-link dropdown-toggle text-maroon" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Apply Now
+                  </a>
+                  <div class="dropdown-menu bg-cusWhite box-shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-maroon" href="./drivers-license.html">Driver's License</a>
+                    <a class="dropdown-item disabled" href="#">Business Permit</a>
+                    <a class="dropdown-item disabled" href="#">Vehicle Registration</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-purple" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              <div class="dropdown">
+              <button type="button" class="btn btn-outline-dark border-0 fas fa-user-circle m-2 py-2" type="button" id="accountDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <div class="dropdown-menu dropdown-menu-right bg-cusWhite" aria-labelledby="accountDrop">
+                  <a class="dropdown-item" href="./user.html">Profile</a>
+                  <a class="dropdown-item disabled" href="#">Account Settings</a>
+                  <a class="dropdown-item" href="./applications.html">Applications</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#"><span class="fas fa-sign-out-alt mr-2"></span> Log Out</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+  <div class="container-fluid bg-cusWhite py-5 px5 position-relative" style="min-height: 69vh">
+    <div id="requirements" form="Driver's License" class="container inner-box-shadow bg-white p-4 pt-0 border rounded border-secondary">
+    </div>
+
+    <form id="app" class="my-2 mx-auto d-flex flex-row flex-wrap justify-content-around" action="">
+      <div class="row w-100 px-3 pt-4 mx-3 justify-content-around">
+
+      </div>
+    </form>
+  </div>
+  
+  <footer class="container-fluid bg-dark-purple text-cusWhite pt-5 pb-4 px-3">
+      <div class="row">
+        <div class="col-3 ml-5 px-5">
+          <ul class="no-list">
+              <li class="text-bold text-peach mb-2">Resources</li>
+              <li>
+                <a class="my-2" href="./about.html">About Us</a>
+              </li>
+              <li>
+                <a class="my-2" href="#">Contact Us</a>
+              </li>
+              <li>
+                <a href="#" class="my-2">Help & Support</a>
+              </li>
+          </ul>
+        </div>
+        <div class="col-3 ml-5 px-5">
+          <ul class="no-list">
+              <li class="text-bold text-peach mb-2">Developers</li>
+              <li>
+                <a class="my-2" href="#">Alexis Dela Rosa</a>
+              </li>
+              <li>
+                <a class="my-2" href="#">Elsie Kathryn Tagupa</a>
+              </li>
+          </ul>
+        </div>
+        <div class="col-3 ml-auto px-5 d-flex flex-row justify-content-center align-items-center">
+          <span>Made with <span class="fas fa-heart text-danger"></span> by DCIS</span>
+        </div>
+      </div>
+    </footer>
+
+
+  <!-- SCRIPTS -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="./scripts/lib/jquery-3.4.1.min.js"></script>
+  <script src="./scripts/lib/popper.min.js">
+  </script>
+  <script src="./scripts/lib/bootstrap.min.js">
+  </script>
+  <script src="./scripts/lib/font-awesome.js"></script>
+  <script src="./scripts/lib/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
