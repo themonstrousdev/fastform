@@ -1,0 +1,13 @@
+<%- include("partial/header") %>
+<body class="bg-cusWhite">
+  <% include partial/purple-navbar %>
+
+  <div class="container-fluid bg-purple p-4">
+    <h1 class="text-justify text-peach"><%= application%></h1>
+  </div>
+
+  <div class="container p-5 mb-5">
+    <%- include(`partial/forms/${data}`)%>
+  </div>
+  
+<%- include("partial/footer") %>

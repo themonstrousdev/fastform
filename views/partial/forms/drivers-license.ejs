@@ -1,0 +1,71 @@
+<form action="/success" method="post" class="mx-auto">
+  <h4 class="ml-3">Personal Information</h4>
+  <div class="row mx-auto">
+    <div class="form-group col-3">
+      <label for="firstname" class="required">First Name</label>
+      <input class="form-control border-dark" type="text" name="fName" id="firstname" placeholder="First Name">
+    </div>
+    <div class="form-group col-3">
+      <label for="lastname" class="required">Last Name</label>
+      <input class="form-control border-dark" type="text" name="lName" id="lastname" placeholder="Last Name">
+    </div>
+    <div class="form-check form-check-inline align-items-end pb-2">
+      <div class="form-group">
+          <input type="radio" name="citizenship" id="local" class="form-check-input" value="Filipino">
+          <label for="local" class="form-check-label mr-3">Filipino Citizen</label>
+        </div>
+        
+        <div class="form-group">
+          <input type="radio" name="citizenship" id="foreign" class="form-check-input" value="Foreigner">
+          <label for="foreign" class="form-check-label mr-3">Foreign Citizen</label>
+        </div>
+    </div>
+  </div>
+  <div class="row mx-auto">
+    <div class="form-group col-10">
+      <label for="address" class="required">Present Address</label>
+      <input type="text" name="street" id="address" class="form-control border-dark mb-1" placeholder="Apartment/House/Building Number, Street">
+      <input type="text" name="city-country" class="form-control border-dark mb-1" placeholder="City/ Municipality">
+      <input type="text" name="zip" class="form-control border-dark" placeholder="Province">
+    </div>
+  </div>
+  <div class="row mx-auto">
+    <div class="col-auto">
+      <label for="contactNumber">Telephone Number/Mobile Number</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">+63</div>
+        </div>
+        <input type="number" class="form-control" name="contactNo" id="contactNumber" placeholder="9xxxxxxxxx">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h4 class="ml-3">Type of Application</h4>
+  <div class="row mx-auto">
+    <div class="form-check form-check-inline px-5 py-3 mx-auto w-75">
+      <div class="form-group w-50">
+          <input type="radio" name="driver-type" id="new" class="form-check-input" value="New Application/Conversion">
+          <label for="new" class="form-check-label mr-3">New Application/Conversation</label>
+      </div>
+      
+      <div class="form-group w-50">
+        <input type="radio" name="driver-type" id="renew" class="form-check-input" value="Renewal">
+        <label for="renew" class="form-check-label mr-3">Renewal</label>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-auto">
+    <div class="form-check form-check-inline px-5 py-3 mx-auto w-75">
+      <div class="form-group w-50">
+        <input type="radio" name="driver-type" id="add" class="form-check-input" value="Additional Restriction Codes">
+        <label for="add" class="form-check-label mr-3">Additional Restriction Codes</label>
+      </div>
+      
+      <div class="form-group w-50">
+        <input type="radio" name="driver-type" id="revise" class="form-check-input" value="Revision of Records/Change Classification">
+        <label for="revise" class="form-check-label mr-3">Revision of Records/Change Classification</label>
+      </div>
+    </div>
+  </div>
+</form>

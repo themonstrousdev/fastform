@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-faded justify-content-center">
+      <% for( var i = 0; i < trail.length; ++i) { %>
+        <% if(i == trail.length-1) { %>
+          <li class="breadcrumb-item active" aria-current="page"><%=trail[i].title%></li>
+        <% } else { %>
+          <li class="breadcrumb-item"><a <%= (i == 0) ? "" : 'style=color:#6c757d'%> href="<%= trail[i].ref%>"><%=trail[i].title%></a></li>
+        <% } %>
+      <% }; %>
+    </ol>
+  </nav>

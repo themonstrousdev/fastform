@@ -48,18 +48,3 @@ app.get("*", (req, res)=>{
 app.listen(3000, ()=>{
     console.log("Server running on port 3000");
 });
-
-
-// functions
-
-function isValid(num) {
-    var valid;
-    fetch(`http://apilayer.net/api/validate?access_key=83698416089a60ed337a058fd2bfd924&number=${num}&country_code=PH`)
-    .then(res=>{
-        return res.json();
-    }).then(data=>{
-        valid = data.valid;
-    });
-
-    return valid;
-}

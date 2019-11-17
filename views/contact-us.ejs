@@ -1,0 +1,69 @@
+<% include partial/header %>
+<body class="bg-purple">
+  
+<% include partial/help-home-nav %>
+
+<div class="container p-2">
+  <h2 class="mt-5 pt-4 text-cusWhite">Contact Us</h2>
+</div>
+<div class="container-fluid p-2 bg-cusWhite pb-5">
+  <div class="row mt-5">
+    <div class="col-3 ml-5 mt-5 pl-5"><h4 class="text-purple">How can we help?</h4></div>
+    <div class="col-7">
+      <div class="accordion" id="help">
+        <div class="card border-maroon">
+          <div class="card-header border-purple" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed text-purple" type="button" data-toggle="collapse" data-target="#accountHelp" aria-expanded="true" aria-controls="accountHelp">
+                I need login and account support.
+              </button>
+            </h2>
+          </div>
+      
+          <div id="accountHelp" class="collapse" aria-labelledby="headingOne" data-parent="#help">
+            <div class="card-body p-0">
+              <ul class="list-group">
+                <a href="/forms/signin" class=" border-peach rounded-0 list-group-item list-group-item-action">I can't log into my account.</a>
+                <a href="#" class=" border-peach list-group-item list-group-item-action">I can't sign up with my National ID.</a>
+                <a href="#" class=" border-peach list-group-item list-group-item-action">My account is locked or suspended.</a>
+                <a href="#" class=" border-peach list-group-item list-group-item-action">I need help activating my account.</a>
+                <a href="#" class=" border-peach list-group-item list-group-item-action">My profile information needs changing.</a>
+                <a href="#" class=" border-peach rounded-0 list-group-item list-group-item-action">I need to deactivate an account of a deceased user.</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card border-maroon">
+          <div class="card-header border-purple" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed text-purple" type="button" data-toggle="collapse" data-target="#appHelp" aria-expanded="false" aria-controls="appHelp">
+                I need application support.
+              </button>
+            </h2>
+          </div>
+          <div id="appHelp" class="collapse" aria-labelledby="headingTwo" data-parent="#help">
+            <div class="card-body p-0">
+              <ul class="list-group">
+                <a href="#" class=" border-peach rounded-0 list-group-item list-group-item-action">I can't submit a fully answer application.</a>
+                <a href="#" class=" border-peach list-group-item list-group-item-action">My application has been processing for too long.</a>
+                <a href="#" class=" border-peach list-group-item list-group-item-action">I can't find a pending application in my profile.</a>
+                <a href="#" class=" border-peach list-group-item list-group-item-action rounded-0">My application got rejected with no error.</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card border-maroon">
+          <div class="card-header border-purple" id="headingThree">
+            <h2 class="mb-0">
+              <a class="btn btn-link text-purple" href="/help-topics">
+                View All Support Topics
+              </a>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partial/footer %>

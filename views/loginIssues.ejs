@@ -1,0 +1,26 @@
+<% include partial/header %>
+<body class="bg-cusWhite">
+  <% include partial/help-nav %>
+
+  <% include partial/breadcrumb %>
+
+  <div class="container w-50 position-relative mb-5 pb-5" style="min-height: 50%">
+    <h1 class="pb-5 mt-2">Login Issues</h1>
+    <div class="row align-items-center mb-3">
+        Do you need to reset your password? Start here: <a href="#" class="btn btn-primary p-2 ml-2 text-uppercase border-0" style="letter-spacing: .1rem; font-size: 75%">Reset My Password</a>
+    </div>
+    <div class="row flex-column">
+        <span class="mb-3">Or type in your National ID and we'll do our best to help:</span>
+        <form>
+          Your National ID Number: 
+          <div class="input-group mt-2">
+              <input type="text" class="form-control" placeholder="National ID No." aria-label="National ID Number" aria-describedby="searchID">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="searchID">Search</button>
+              </div>
+            </div>
+        </form>
+    </div>
+  </div>
+
+<% include partial/footer %>
