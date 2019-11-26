@@ -1,396 +1,399 @@
 /* Patua One [Header], Sintony [Text] */
 
 @font-face {
-   font-family: 'Storm'; 
-   src: url('../assets/fonts/STOREB__.TTF') format('truetype');
+    font-family: 'Storm';
+    src: url('/assets/fonts/STOREB__.TTF') format('truetype');
 }
 
 @font-face {
-   font-family: 'Run'; 
-   src: url('../assets/fonts/Run-6YeWA.ttf') format('truetype')
+    font-family: 'Run';
+    src: url('/assets/fonts/Run-6YeWA.ttf') format('truetype')
 }
 
 :root {
-  --dark-purple: #251727;
-  --purple: #4e2e54;
-  --maroon: #954f75;
-  --peach: #f8dac3;
-  --cusWhite: #f8f4e9;
-  --faded: rgb(230, 230, 230);
+    --dark-purple: #251727;
+    --purple: #4e2e54;
+    --maroon: #954f75;
+    --peach: #f8dac3;
+    --cusWhite: #f8f4e9;
+    --faded: rgb(230, 230, 230);
 }
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 .text-dark-purple {
-  color: var(--dark-purple) !important;
+    color: var(--dark-purple) !important;
 }
 
 .text-purple {
-  color: var(--purple) !important;
+    color: var(--purple) !important;
 }
 
 .text-maroon {
-  color: var(--maroon) !important;
+    color: var(--maroon) !important;
 }
 
 .text-peach {
-  color: var(--peach) !important;
+    color: var(--peach) !important;
 }
 
 .text-cusWhite {
-  color: var(--cusWhite) !important;
+    color: var(--cusWhite) !important;
 }
 
-
 .bg-faded {
-  background-color: var(--faded) !important;
+    background-color: var(--faded) !important;
 }
 
 .bg-dark-purple {
-  background-color: var(--dark-purple) !important;
+    background-color: var(--dark-purple) !important;
 }
 
 .bg-purple {
-  background-color: var(--purple) !important;
+    background-color: var(--purple) !important;
 }
 
 .bg-maroon {
-  background-color: var(--maroon) !important;
+    background-color: var(--maroon) !important;
 }
 
 .bg-peach {
-  background-color: var(--peach) !important;
+    background-color: var(--peach) !important;
 }
 
 .bg-cusWhite {
-  background-color: var(--cusWhite) !important;
+    background-color: var(--cusWhite) !important;
 }
 
 .btn-primary {
-  background-color: var(--purple) !important;
-  border-color: var(--purple) !important;
+    background-color: var(--purple) !important;
+    border-color: var(--purple) !important;
 }
 
 .btn-primary:hover {
-  background-color: var(--dark-purple) !important;
+    background-color: var(--dark-purple) !important;
 }
 
 .dropdown-menu.bg-cusWhite {
-  background-color: #f8f7f4 !important;
+    background-color: #f8f7f4 !important;
 }
 
 .bg-dark-purple .dropdown-item:hover {
-  background-color: var(--maroon) !important;
+    background-color: var(--maroon) !important;
 }
 
 .dropdown-item.disabled {
-  background: rgba(0,0,0,0.05) !important;
-  color: rgba(0,0,0,0.5) !important;
-  font-style: italic;
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: rgba(0, 0, 0, 0.5) !important;
+    font-style: italic;
 }
 
 .nav-item,
-.dropdown-menu.bg-cusWhite .dropdown-item  {
-  transition: all 200ms ease-in-out;
+.dropdown-menu.bg-cusWhite .dropdown-item {
+    transition: all 200ms ease-in-out;
 }
 
 .nav-item.active a {
-  width: fit-content;
-  color: var(--purple) !important;
-  border-bottom: 1px solid currentColor;
+    width: fit-content;
+    color: var(--purple) !important;
+    border-bottom: 1px solid currentColor;
 }
 
 .nav-item:not(.disabled):hover,
 .nav-item.show {
-  background-color: rgba(248, 218, 195, 0.5);
+    background-color: rgba(248, 218, 195, 0.5);
 }
 
 .nav-item.disabled a {
-  color: rgba(149, 79, 117, 0.4) !important;
+    color: rgba(149, 79, 117, 0.4) !important;
 }
 
 .dropdown-menu.bg-cusWhite .dropdown-item:hover {
-  background-color: rgba(248, 218, 195, 0.2);
+    background-color: rgba(248, 218, 195, 0.2);
 }
 
 .border-purple {
-  border-color: var(--purple) !important;
+    border-color: var(--purple) !important;
 }
 
 .border-maroon {
-  border-color: var(--maroon) !important;
+    border-color: var(--maroon) !important;
 }
 
 .border-peach {
-  border-color: var(--peach) !important;
+    border-color: var(--peach) !important;
 }
 
 .border-cusWhite {
-  border-color: var(--cusWhite) !important;
+    border-color: var(--cusWhite) !important;
 }
 
 .box-sizing-border {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .box-shadow {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
 }
 
 .box-shadow-dark {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5) !important;
 }
 
 .drop-shadow {
-  filter: drop-shadow(-4px 2px 6px rgba(0,0,0,0.5));
+    filter: drop-shadow(-4px 2px 6px rgba(0, 0, 0, 0.5));
 }
 
 .inner-box-shadow {
-  box-shadow: inset 0 -4px 6px rgba(0,0,0,0.2) !important;
+    box-shadow: inset 0 -4px 6px rgba(0, 0, 0, 0.2) !important;
 }
 
 .move-front {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .text-strike {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Patua One", sans-serif;
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Patua One", sans-serif;
 }
 
 .slant {
-  background: var(--cusWhite);
-  mask: linear-gradient(3deg, transparent 10%, black 5%);
-  -webkit-mask: linear-gradient(3deg, transparent 10%, black 5%);
+    background: var(--cusWhite);
+    mask: linear-gradient(3deg, transparent 10%, black 5%);
+    -webkit-mask: linear-gradient(3deg, transparent 10%, black 5%);
 }
 
 .dotted {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(75%, -50%);
-  height: 50%;
-  width: 50%;
-  background: var(--peach);
-  mask: url(../assets/polka.png) top left/auto 100% no-repeat;
-  -webkit-mask: url(../assets/polka.png) top left/auto 100% no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(75%, -50%);
+    height: 50%;
+    width: 50%;
+    background: var(--peach);
+    mask: url(../assets/polka.png) top left/auto 100% no-repeat;
+    -webkit-mask: url(../assets/polka.png) top left/auto 100% no-repeat;
 }
 
 .run {
-  font-family: "Run", sans-serif;
+    font-family: "Run", sans-serif;
 }
 
 .storm {
-  font-family: "Storm", sans-serif;
+    font-family: "Storm", sans-serif;
 }
 
 .patua {
-  font-family: "Patua One", serif;
+    font-family: "Patua One", serif;
 }
 
 .transx-neg-25 {
-  transform: translateX(-25%);
+    transform: translateX(-25%);
 }
 
 .transx-neg-50 {
-  transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .transx-neg-75 {
-  transform: translateX(-75%);
+    transform: translateX(-75%);
 }
 
 .transx-neg-100 {
-  transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .transx-25 {
-  transform: translateX(25%);
+    transform: translateX(25%);
 }
 
 .transx-50 {
-  transform: translateX(50%);
+    transform: translateX(50%);
 }
 
 .transx-75 {
-  transform: translateX(75%);
+    transform: translateX(75%);
 }
 
 .transx-100 {
-  transform: translateX(100%);
+    transform: translateX(100%);
 }
 
 .img-fluid-h {
-  max-height: 100%;
-  width: auto;
+    max-height: 100%;
+    width: auto;
 }
 
 footer a {
-  color: var(--cusWhite) !important;
+    color: var(--cusWhite) !important;
 }
 
 footer a:hover {
-  color: var(--peach) !important;
+    color: var(--peach) !important;
 }
 
 #requirements,
 #requirements ul li {
-  position: relative;
+    position: relative;
 }
 
 #requirements ul {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 #requirements::after {
-  content: "Requirements For "attr(form);
-  position: absolute;
-  top: 0;
-  left: 2%;
-  background: white;
-  padding: .5rem;
-  border: 1px solid #6c757d;
-  border-radius: .25rem;
-  transform: translate(0, -50%);
-  font-weight: bold;
-  font-family: "Patua One", sans-serif;
+    content: "Requirements For "attr(form);
+    position: absolute;
+    top: 0;
+    left: 2%;
+    background: white;
+    padding: .5rem;
+    border: 1px solid #6c757d;
+    border-radius: .25rem;
+    transform: translate(0, -50%);
+    font-weight: bold;
+    font-family: "Patua One", sans-serif;
 }
 
 .form-control[type="search"] {
-  transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .bg-cusWhite .form-control[type="search"]:focus {
-  box-shadow: 0 2px 0px var(--dark-purple);
+    box-shadow: 0 2px 0px var(--dark-purple);
 }
 
 .bg-purple .form-control[type="search"]:focus {
-  box-shadow: 0 2px 0px var(--peach);
+    box-shadow: 0 2px 0px var(--peach);
 }
 
 .bg-purple .form-control[type="search"]::placeholder {
-  color: var(--peach);
-  opacity: .5;
+    color: var(--peach);
+    opacity: .5;
 }
 
 form#app {
-  width: 80%;
+    width: 80%;
 }
 
 form#app input[type="file"] {
-  display: none;
+    display: none;
 }
 
 form#app .form-group label {
-  position: relative;
-  width: fit-content;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
 }
 
 form#app .form-group label:hover {
-  filter: saturate(50%);
+    filter: saturate(50%);
 }
 
 #runningMan {
-  height: 20rem;
-  background: linear-gradient(to bottom right, var(--purple), var(--maroon));
-  -webkit-mask: url(../assets/fastt.png) center/contain no-repeat;
-  mask-image: url(../assets/fastt.png);
-  mask-size: contain;
-  mask-position: center;
-  mask-repeat: no-repeat;
+    height: 20rem;
+    background: linear-gradient(to bottom right, var(--purple), var(--maroon));
+    -webkit-mask: url(../assets/fastt.png) center/contain no-repeat;
+    mask-image: url(../assets/fastt.png);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
 }
 
 .run-anim {
-  opacity: 0;
-  transform: translateX(-50%);
-  animation: run 800ms cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards 500ms;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: run 800ms cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards 500ms;
 }
 
 @keyframes run {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 button#accountDrop {
-  font-size: 1.22rem;
+    font-size: 1.22rem;
 }
 
 .no-list {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 .no-list li {
-  margin-top: .3rem !important;
+    margin-top: .3rem !important;
 }
 
 .imgInpt {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .imgInpt::after {
-  content: "Change Profile Picture";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 130%;
-  font-weight: bold;
-  opacity: 0; 
-  transition: all 200ms ease-in-out;
-  pointer-events: none;
+    content: "Change Profile Picture";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 130%;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    pointer-events: none;
 }
 
 .imgInpt:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
 .uploadLogo {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
 }
 
 #help .list-group-item-action:hover {
-  background: var(--cusWhite);
-  color: var(--maroon);
+    background: var(--cusWhite);
+    color: var(--maroon);
 }
 
 .breadcrumb-item {
-  font-size: 90%;
+    font-size: 90%;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-  content: "\00BB";
+    content: "\00BB";
 }
 
+
 /* custom inputs */
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     display: none;
 }
 
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
@@ -399,8 +402,8 @@ button#accountDrop {
     color: #666;
 }
 
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -412,8 +415,8 @@ button#accountDrop {
     background: #fff;
 }
 
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
     content: '';
     width: calc(1.3rem - 8px);
     height: calc(1.3rem - 8px);
@@ -426,22 +429,22 @@ button#accountDrop {
     transition: all 0.2s ease;
 }
 
-[type="radio"]:not(:checked) + label:after {
+[type="radio"]:not(:checked)+label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
 
-[type="radio"]:checked + label:after {
+[type="radio"]:checked+label:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
+    margin: 0;
 }
