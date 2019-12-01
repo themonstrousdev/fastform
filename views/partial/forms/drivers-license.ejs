@@ -3,69 +3,312 @@
   <div class="row mx-auto">
     <div class="form-group col-3">
       <label for="firstname" class="required">First Name</label>
-      <input class="form-control border-dark" type="text" name="fName" id="firstname" placeholder="First Name">
+      <input class="form-control border-dark" type="text" name="firstname" id="firstname" placeholder="First Name" required>
     </div>
     <div class="form-group col-3">
       <label for="lastname" class="required">Last Name</label>
-      <input class="form-control border-dark" type="text" name="lName" id="lastname" placeholder="Last Name">
+      <input class="form-control border-dark" type="text" name="lastname" id="lastname" placeholder="Last Name" required>
     </div>
-    <div class="form-check form-check-inline align-items-end pb-2">
-      <div class="form-group">
-          <input type="radio" name="citizenship" id="local" class="form-check-input" value="Filipino">
-          <label for="local" class="form-check-label mr-3">Filipino Citizen</label>
+    <div class="form-group col-auto">
+      <label>Citizenship</label>
+      <div class="mt-2">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="local" name="citizenship" class="custom-control-input border-dark" required value="Filipino">
+          <label class="custom-control-label" for="local">Filipino</label>
         </div>
-        
-        <div class="form-group">
-          <input type="radio" name="citizenship" id="foreign" class="form-check-input" value="Foreigner">
-          <label for="foreign" class="form-check-label mr-3">Foreign Citizen</label>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="foreign" name="citizenship" class="custom-control-input border-dark" value="Foreigner">
+          <label class="custom-control-label" for="foreign">Foreigner</label>
         </div>
+      </div>
     </div>
   </div>
   <div class="row mx-auto">
     <div class="form-group col-10">
       <label for="address" class="required">Present Address</label>
-      <input type="text" name="street" id="address" class="form-control border-dark mb-1" placeholder="Apartment/House/Building Number, Street">
-      <input type="text" name="city-country" class="form-control border-dark mb-1" placeholder="City/ Municipality">
-      <input type="text" name="zip" class="form-control border-dark" placeholder="Province">
+      <input type="text" name="street" id="address" class="form-control border-dark mb-1" placeholder="Apartment/House/Building Number, Street" required>
+      <input type="text" name="city_country" class="form-control border-dark mb-1" placeholder="City/ Municipality" required>
+      <input type="text" name="zip" class="form-control border-dark" placeholder="Province" required>
     </div>
   </div>
   <div class="row mx-auto">
-    <div class="col-auto">
+    <div class="col-3 form-group">
+      <label for="gender">Gender</label>
+      <div class="mt-2">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="female" name="gender" value="F" class="custom-control-input border-dark" required>
+          <label class="custom-control-label" for="female">Female</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="male" name="gender" value="M" class="custom-control-input border-dark">
+          <label class="custom-control-label" for="male">Male</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3 form-group">
+      <label for="birthday">Birth Date</label>
+      <input type="date" name="birthday" id="birthday" class="form-control border-dark" required>
+    </div>
+
+    <div class="col-2 form-group">
+      <label for="height">Height</label>
+      <div class="input-group">
+        <input type="number" name="height" id="height" class="form-control border-dark" placeholder="130" aria-label="Height in cm" aria-describedby="height-addon" required>
+        <div class="input-group-append">
+          <span class="input-group-text border-dark bg-dark text-light" id="height-addon">cm</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label for="weight">Weight</label>
+      <div class="input-group">
+        <input type="number" name="weight" id="weight" class="form-control border-dark" placeholder="50" aria-label="Weight in kg" aria-describedby="weight-addon" required>
+        <div class="input-group-append">
+          <span class="input-group-text border-dark bg-dark text-light" id="weight-addon">kg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-auto">
+    <div class="col-4">
       <label for="contactNumber">Telephone Number/Mobile Number</label>
       <div class="input-group mb-2">
         <div class="input-group-prepend">
-          <div class="input-group-text">+63</div>
+          <div class="input-group-text border-dark bg-dark text-light">+63</div>
         </div>
-        <input type="number" class="form-control" name="contactNo" id="contactNumber" placeholder="9xxxxxxxxx">
+        <input type="number" class="form-control border-dark" name="contactNo" id="contactNumber" placeholder="9xxxxxxxxx" required>
       </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label for="bloodType">Blood Type</label>
+      <input type="text" name="bloodType" id="bloodType" class="form-control border-dark" required>
+    </div>
+
+    <div class="col-3 mt-3 align-self-center custom-control custom-checkbox">
+      <input type="checkbox" id="organDonor" name="organDonor" class="custom-control-input border-dark" value="true">
+      <label class="custom-control-label" for="organDonor">I am an organ donor</label>
+    </div>
+  </div>
+  
+  <div class="row ml-3">
+    <div class="col-2 border border-dark rounded p-3 mr-2">
+      <label>Civil Status</label>
+      <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" name="civilStat" id="single" class="custom-control-input" value="Single" required>
+        <label for="single" class="custom-control-label">Single</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="civilStat" id="married" class="custom-control-input" value="Married">
+        <label for="married" class="custom-control-label">Married</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="civilStat" id="widow" class="custom-control-input" value="Widow/er">
+        <label for="widow" class="custom-control-label">Widow/er</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="civilStat" id="separate" class="custom-control-input" value="Separated">
+        <label for="separate" class="custom-control-label">Separated</label>
+      </div>
+    </div>
+
+    <div class="col-2 border border-dark rounded p-3 mr-2">
+      <label for="light">Build</label>
+      <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" name="build" id="lightBuild" class="custom-control-input" value="Light" required>
+        <label for="lightBuild" class="custom-control-label">Light</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="build" id="mediumBuild" class="custom-control-input" value="Medium">
+        <label for="mediumBuild" class="custom-control-label">Medium</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="build" id="heavyBuild" class="custom-control-input" value="Heavy">
+        <label for="heavyBuild" class="custom-control-label">Heavy</label>
+      </div>
+    </div>
+
+    <div class="col-2 border border-dark rounded p-3 mr-2">
+      <label for="lightComplex">Complexion</label>
+      <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" name="complex" id="lightComplex" class="custom-control-input" value="Light" required>
+        <label for="lightComplex" class="custom-control-label">Light</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="complex" id="fairComplex" class="custom-control-input" value="Fair">
+        <label for="fairComplex" class="custom-control-label">Fair</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="complex" id="darkComplex" class="custom-control-input" value="Dark">
+        <label for="darkComplex" class="custom-control-label">Dark</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-2 ml-3">
+    <div class="col-3 border border-dark rounded p-3 mr-2">
+      <label for="blackEyes">Eye Color</label>
+      <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" name="eye_color" id="blackEyes" class="custom-control-input" value="Black" required>
+        <label for="blackEyes" class="custom-control-label">Black</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="eye_color" id="brownEyes" class="custom-control-input" value="Brown">
+        <label for="brownEyes" class="custom-control-label">Brown</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="eye_color" id="grayEyes" class="custom-control-input" value="Gray">
+        <label for="grayEyes" class="custom-control-label">Gray</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="eye_color" id="otherEyes" class="custom-control-input" value="Other">
+        <label for="otherEyes" class="custom-control-label">Others
+          <div class="form-group">
+            <input type="text" name="otherEyes_input" id="otherEyes-input" class="form-control border-dark">
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="col-3 border border-dark rounded p-3 mr-2">
+      <label for="blackHair">Hair Color</label>
+      <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" name="hair_color" id="blackHair" class="custom-control-input" value="Black" required>
+        <label for="blackHair" class="custom-control-label">Black</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="hair_color" id="brownHair" class="custom-control-input" value="Brown">
+        <label for="brownHair" class="custom-control-label">Brown</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="hair_color" id="blondeHair" class="custom-control-input">
+        <label for="blondeHair" class="custom-control-label">Blonde</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="hair_color" id="grayHair" class="custom-control-input">
+        <label for="grayHair" class="custom-control-label">Gray</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="hair_color" id="otherHair" class="custom-control-input" value="Other">
+        <label for="otherHair" class="custom-control-label">Others
+          <div class="form-group">
+            <input type="text" name="otherHair_input" id="otherHair-input" class="form-control border-dark">
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto">
+    <div class="form-group col-6">
+      <label for="birthplace">Birthplace</label>
+      <input type="text" name="birthplace" id="birthplace" placeholder="City/Municipality, Province" class="form-control border-dark">
+    </div>
+
+    <div class="form-group col-6">
+      <label for="fatherName">Father's Name <small class="text-black-50 font-italic">Indicate even if deceased</small></label>
+      <input type="text" name="fatherName" id="FatherName" placeholder="Family Name, First Name, Middle Name" class="form-control border-dark">
+    </div>
+
+    <div class="form-group col-6">
+      <label for="motherName">Mother's Name <small class="text-black-50 font-italic">Indicate even if deceased</small></label>
+      <input type="text" name="motherName" id="motherName" placeholder="Family Name, First Name, Middle Name" class="form-control border-dark">
+    </div>
+
+    <div class="form-group col-6">
+      <label for="spouseName">Spouse Name <small class="text-black-50 font-italic">Indicate even if deceased</small></label>
+      <input type="text" name="spouseName" id="spouseName" placeholder="Family Name, First Name, Middle Name" class="form-control border-dark">
+    </div>
+  </div>
+
+  <div class="row mx-auto">
+    <div class="form-group col-8">
+      <label for="employBusiness-name">Employer's Business Name</label>
+      <input type="text" name="business_name" id="employBusiness-name" class="form-control border-dark">
+    </div>
+
+    <div class="form-group col-4">
+      <label for="employBusiness-num">Telephone Number</label>
+      <input type="number" name="business_num" id="employBusiness-num" class="form-control border-dark">
+    </div>
+
+    <div class="form-group col-12">
+      <label for="employBusiness-add">Employer's Business Address</label>
+      <input type="text" name="business_add" id="employBusiness-add" class="form-control border-dark">
     </div>
   </div>
   <hr>
   <h4 class="ml-3">Type of Application</h4>
-  <div class="row mx-auto">
-    <div class="form-check form-check-inline px-5 py-3 mx-auto w-75">
-      <div class="form-group w-50">
-          <input type="radio" name="driver-type" id="new" class="form-check-input" value="New Application/Conversion">
-          <label for="new" class="form-check-label mr-3">New Application/Conversation</label>
-      </div>
-      
-      <div class="form-group w-50">
-        <input type="radio" name="driver-type" id="renew" class="form-check-input" value="Renewal">
-        <label for="renew" class="form-check-label mr-3">Renewal</label>
-      </div>
+  <div class="row mb-2 mx-auto justify-content-center">
+    <div class="col-5 custom-control custom-radio custom-control-inline">
+      <input type="radio" name="appType" id="newApp" class="custom-control-input border-dark" required value="newApp">
+      <label for="newApp" class="custom-control-label">New Application</label>
+    </div>
+
+    <div class="col-5 custom-control custom-radio custom-control-inline">
+      <input type="radio" name="appType" id="dormant" class="custom-control-input border-dark" value="dormant">
+      <label for="dormant" class="custom-control-label">Delinquent/Dormant License</label>
     </div>
   </div>
-  <div class="row mx-auto">
-    <div class="form-check form-check-inline px-5 py-3 mx-auto w-75">
-      <div class="form-group w-50">
-        <input type="radio" name="driver-type" id="add" class="form-check-input" value="Additional Restriction Codes">
-        <label for="add" class="form-check-label mr-3">Additional Restriction Codes</label>
-      </div>
-      
-      <div class="form-group w-50">
-        <input type="radio" name="driver-type" id="revise" class="form-check-input" value="Revision of Records/Change Classification">
-        <label for="revise" class="form-check-label mr-3">Revision of Records/Change Classification</label>
-      </div>
+
+  <div class="row mb-2 mx-auto justify-content-center">
+    <div class="col-5 custom-control custom-radio custom-control-inline">
+      <input type="radio" name="appType" id="changeClass" class="custom-control-input border-dark" value="changeClass">
+      <label for="changeClass" class="custom-control-label">Change Classification</label>
     </div>
+
+    <div class="col-5 custom-control custom-radio custom-control-inline">
+      <input type="radio" name="appType" id="convert" class="custom-control-input border-dark" value="convert">
+      <label for="convert" class="custom-control-label">Foreign License Conversation</label>
+    </div>
+  </div>
+
+  <div class="row mb-2 mx-auto justify-content-center">
+    <div class="col-5 custom-control custom-radio custom-control-inline">
+      <input type="radio" name="appType" id="renew" class="custom-control-input border-dark" value="renew">
+      <label for="renew" class="custom-control-label">Renewal</label>
+    </div>
+
+    <div class="col-5 custom-control custom-radio custom-control-inline">
+      <input type="radio" name="appType" id="restrict" class="custom-control-input border-dark" value="restrict">
+      <label for="restrict" class="custom-control-label">Additional Restriction Code</label>
+    </div>
+  </div>
+
+  <div class="row mb-2 mx-auto justify-content-center">
+    <div class="col-5 custom-control custom-radio custom-control-inline">
+      <input type="radio" name="appType" id="duplicate" class="custom-control-input border-dark" value="duplicate">
+      <label for="duplicate" class="custom-control-label">Duplicate</label>
+    </div>
+
+    <div class="col-5 custom-control custom-radio custom-control-inline">
+      <input type="radio" name="appType" id="revise" class="custom-control-input border-dark" value="revise">
+      <label for="revise" class="custom-control-label">Revision of Records</label>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <button type="submit" class="btn btn-success ml-auto" onclick="isValid($('#contactNumber'))">Apply</button>
   </div>
 </form>

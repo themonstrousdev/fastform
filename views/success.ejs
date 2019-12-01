@@ -1,0 +1,25 @@
+<%- include("partial/header") %>
+<body class="bg-cusWhite">
+    <%- include("partial/purple-navbar") %>
+
+    <div class="container p-5 text-center">
+        <div class="row">
+            <div class="col-5 mx-auto">
+                <img src="/assets/sent.gif" alt="" class="img-fluid rounded-circle">
+            </div>
+        </div>
+        <h1 class="text-success">Application Sent!</h1>
+        <p>
+            Your application has been sent! Check the application ID to check the status of your application.
+        </p>
+        <p>
+            <span class="font-weight-bold">Application ID:</span> <%= id %>
+        </p>
+        <div class="row">
+            <div class="mx-auto">
+                <a class="btn btn-primary font-weight-bold" href="/">Go Home</a>
+            </div>
+        </div>
+    </div>
+
+<%- include("partial/footer") %>

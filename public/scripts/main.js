@@ -8,7 +8,7 @@ $("#hello").onchange = function() {
   console.log($("#hello"));
 }
 
-$(window).on("load",function(){
+$(document).ready(function(){
   
 
   $("body").mCustomScrollbar({
@@ -16,6 +16,29 @@ $(window).on("load",function(){
     axis: "y"
   });
   
+  $("form button[type=submit]").click( async function(){
+    console.log("clicked!");
+    var input = $("#contactNumber"),
+    num= input.val(),
+    valid = await fetch(`http://apilayer.net/api/validate?access_key=83698416089a60ed337a058fd2bfd924&number=${num}&country_code=PH`)
+    .then(res=>{
+        return res.json();
+    }).then(data=>{
+        return data.valid;
+    });
+  
+    if(!valid) {
+      input.removeClass("border-dark");
+      input.addClass("is-invalid");
+      $("<div>", {
+        class: "invalid-feedback",
+        html: "You gave an invalid contact number."
+      }).appendTo(input.parent());
+    }
+  
+    return valid;
+  });
+
 });
 
 function readURL(input) {
