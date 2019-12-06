@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const conn = mongoose.connect('mongodb://localhost:27017/fast-form', {
+const conn = mongoose.createConnection('mongodb://localhost/fast-form', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, (error)=> {

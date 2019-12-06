@@ -1,0 +1,16 @@
+<% for(var i = 0; i < news.length; ++i) %> <!-- loops through your news array, which was an array of all the                                                    found entries-->
+<!-- You can also use forEach but I don't want to overwhelm you in case you don't know what that is yet. 
+     We'll stick with what I know you know -->
+<div class="card">
+    <div class="card-body">
+        <div class="card-title"><%= news[i].newsTitle %></div> <!-- this takes the newsTitle property (as found                                                             in your schema and print it as the card                                                                 title-->
+
+        <div class="card-subtitle"><%= news[i].newsAuthor %></div>
+        <div class="card-text">
+            <%= news[i].newsDetails %>
+            
+            <small><%= news[i].newsType %></small>
+        </div>
+        
+    </div>
+</div>

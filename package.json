@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/themonstrousdev/fastform#readme",
   "dependencies": {
+    "bcrypt": "^3.0.7",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.2",
@@ -25,6 +26,8 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.7.12",
     "multer": "^1.4.2",
-    "multer-gridfs-storage": "^4.0.1"
+    "multer-gridfs-storage": "^4.0.1",
+    "pdfmake": "^0.1.62",
+    "qrcode": "^1.4.4"
   }
 }

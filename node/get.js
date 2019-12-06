@@ -1,5 +1,6 @@
 const express = require('express'),
-    app = express.Router();
+    app = express.Router(),
+    User = require('./user');
 
 app.get("/", (req, res) => {
     res.render("home", {

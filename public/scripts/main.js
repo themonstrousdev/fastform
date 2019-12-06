@@ -15,6 +15,15 @@ $(document).ready(function(){
     theme:"minimal",
     axis: "y"
   });
+
+  $(".custom-file-input").change(function() {
+    console.log("Changed file!");
+    var dest = $(this).attr("name"),
+        value = $(this).val(),
+        content = value.substring(value.lastIndexOf("\\")+1,value.length);
+
+    $(`.custom-file-label[for=${dest}]`).html(content);
+  });
   
   $("form button[type=submit]").click( async function(){
     console.log("clicked!");
@@ -24,7 +33,10 @@ $(document).ready(function(){
     .then(res=>{
         return res.json();
     }).then(data=>{
+        console.log(data.valid);
         return data.valid;
+    }).catch(()=>{
+      return true;
     });
   
     if(!valid) {
@@ -34,9 +46,19 @@ $(document).ready(function(){
         class: "invalid-feedback",
         html: "You gave an invalid contact number."
       }).appendTo(input.parent());
-    }
-  
+    } 
+
     return valid;
+  
+  });
+
+  $("input[name=appType]").change(function(){
+    var val = $(this).val();
+    if(val == "newApp") {
+      $("#studentsPermit").parents('.requirement').show();
+    } else {
+      $("#studentsPermit").parents('.requirement').hide();
+    }
   });
 
 });

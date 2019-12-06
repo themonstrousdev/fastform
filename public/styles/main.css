@@ -385,6 +385,9 @@ button#accountDrop {
     content: "\00BB";
 }
 
+.requirement {
+    display: none;
+}
 
 /* custom inputs */
 
