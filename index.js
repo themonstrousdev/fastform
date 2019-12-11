@@ -4,7 +4,8 @@ const express = require("express"),
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-let user;
+require('./node/connectDB');
+require('./node/createSession');
 
 // my codes
 const getRequests = require('./node/get'),

@@ -22,10 +22,12 @@ $(document).ready(function(){
         value = $(this).val(),
         content = value.substring(value.lastIndexOf("\\")+1,value.length);
 
+    console.log(value);
+
     $(`.custom-file-label[for=${dest}]`).html(content);
   });
   
-  $("form button[type=submit]").click( async function(){
+  $("form button[type=submit]").click( async function(e){
     console.log("clicked!");
     var input = $("#contactNumber"),
     num= input.val(),
@@ -48,7 +50,7 @@ $(document).ready(function(){
       }).appendTo(input.parent());
     } 
 
-    return valid;
+    e.preventDefaut();
   
   });
 

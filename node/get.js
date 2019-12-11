@@ -1,7 +1,7 @@
 const express = require('express'),
-    app = express.Router(),
-    User = require('./user');
+    app = express.Router();
 
+//middleware
 app.get("/", (req, res) => {
     res.render("home", {
         title: "FastForm"

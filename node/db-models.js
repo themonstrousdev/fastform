@@ -34,7 +34,9 @@ const ApplicationSchema = mongoose.Schema({
         business_name: {type:String},
         business_num: {type:Number},
         business_add: {type:String},
-        appType: {type:String}
+        appType: {type:String},
+        medCert: {type: String, required: true},
+        studentsPermit: {type: String}
     }
 });
 

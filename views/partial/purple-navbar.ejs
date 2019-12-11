@@ -18,29 +18,38 @@
             <a class="nav-link text-cusWhite" href="/contact-us">Contact Us</a>
           </li>
           <li class="nav-item rounded dropdown">
-            <a class="nav-link dropdown-toggle text-cusWhite" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-cusWhite" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Apply Now
             </a>
             <div class="dropdown-menu bg-dark-purple box-shadow" aria-labelledby="navbarDropdown">
               <a class="dropdown-item text-cusWhite" href="/drivers-license">Driver's License</a>
-              <a class="dropdown-item disabled" href="/business-permit">Business Permit</a>
-              <a class="dropdown-item disabled" href="/vehicle-registration">Vehicle Registration</a>
+              <a class="dropdown-item disabled text-white-50" href="/business-permit">Business Permit</a>
+              <a class="dropdown-item disabled text-white-50" href="/vehicle-registration">Vehicle Registration</a>
             </div>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control text-peach mr-sm-2 bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-peach" type="search" placeholder="Search" aria-label="Search">
+          <input
+            class="form-control text-peach mr-sm-2 bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-peach"
+            type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         <div class="dropdown">
-        <button type="button" class="btn btn-outline-light border-0 fas fa-user-circle m-2 py-2" type="button" id="accountDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+          <button type="button" class="btn btn-outline-light border-0 fas fa-user-circle m-2 py-2" type="button"
+            id="accountDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
           <div class="dropdown-menu dropdown-menu-right bg-dark-purple" aria-labelledby="accountDrop">
+            <% if(locals.loggedIn && loggedIn) { %>
             <a class="dropdown-item text-cusWhite" href="/user">Profile</a>
             <a class="dropdown-item disabled" href="/settings">Account Settings</a>
             <a class="dropdown-item text-cusWhite" href="/applications">Applications</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-danger" href="/log-out"><span class="fas fa-sign-out-alt mr-2"></span> Log Out</a>
+            <a class="dropdown-item text-danger" href="/log-out"><span class="fas fa-sign-out-alt mr-2"></span> Log
+              Out</a>
+            <% } else { %>
+            <a class="dropdown-item text-cusWhite" href="/login">Login</a>
+            <a class="dropdown-item" href="/register">Register</a>
+            <% } %>
           </div>
         </div>
       </div>
