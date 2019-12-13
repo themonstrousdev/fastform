@@ -1,0 +1,46 @@
+<%- include("partial/header") %>
+
+<body class="bg-cusWhite">
+    <%- include("partial/header-admin") %>
+
+    <div class="container p-5" style="min-height: 70vh">
+        <div class="row">
+            <h2 class="text-dark mx-auto">Welcome back, <%= name %></h2>
+            <form action="/add-task" method="post" class="col-10 mx-auto">
+                <div class="input-group bg-white rounded shadow mt-2">
+                    <input type="text" name="needToDo" id="needToDo" class="form-control border-light rounded"
+                        style="font-size: 120%" placeholder="Add a task">
+                    <div class="input-group-append rounded">
+                        <button type="submit" class="btn btn-outline-success border-0">
+                            <span class="fas fa-arrow-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <% if(locals.tasks && tasks.length > 0) { %>
+                <% tasks.forEach(task => { %>
+                    <div class="card col-10 mx-auto my-3 rounded">
+                        <div class="card-body row align-items-center">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"><%= task.content %></label>
+                            </div>
+
+                            <button class="btn btn-outline-danger border-0 ml-auto">
+                                &times;
+                            </button>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else {%>
+            <div class="my-5 mx-auto">
+                <span class="font-weight-bold">You have no tasks right now.</span>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+    <%- include("partial/footer") %>

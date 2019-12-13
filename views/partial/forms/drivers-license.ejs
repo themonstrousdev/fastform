@@ -1,28 +1,29 @@
 <form action="/success" method="post" class="mx-auto" enctype="multipart/form-data">
   <h4 class="ml-3">Personal Information</h4>
+  <input type="text" name="application" id="appliaction" value="Driver's License" class="hidden">
   <div class="row mx-auto">
     <div class="form-group col-3">
       <label for="firstname" class="required">First Name</label>
       <input class="form-control border-dark" type="text" name="firstname" id="firstname" placeholder="First Name"
-        required>
+      required <%if(loggedIn&&user){%>value="<%=user.firstname%>" readonly<%}%>>
     </div>
     <div class="form-group col-3">
       <label for="lastname" class="required">Last Name</label>
       <input class="form-control border-dark" type="text" name="lastname" id="lastname" placeholder="Last Name"
-        required>
+      required <%if(loggedIn&&user){%>value="<%=user.lastname%>" readonly<%}%>>
     </div>
     <div class="form-group col-auto">
       <label>Citizenship</label>
       <div class="mt-2">
         <div class="custom-control custom-radio custom-control-inline">
           <input type="radio" id="local" name="citizenship" class="custom-control-input border-dark" required
-            value="Filipino">
+          value="Filipino"  <%if(loggedIn&&user){%>checked<%}%>>
           <label class="custom-control-label" for="local">Filipino</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline">
           <input type="radio" id="foreign" name="citizenship" class="custom-control-input border-dark"
-            value="Foreigner">
-          <label class="custom-control-label" for="foreign">Foreigner</label>
+            value="Foreigner" <%if(loggedIn&&user){%>disabled<%}%>>
+          <label class="custom-control-label <%if(loggedIn&&user){%>disabled<%}%>" for="foreign">Foreigner</label>
         </div>
       </div>
     </div>
@@ -54,7 +55,9 @@
 
     <div class="col-3 form-group">
       <label for="birthday">Birth Date</label>
-      <input type="date" name="birthday" id="birthday" class="form-control border-dark" required>
+      <input type="date" name="birthday" id="birthday" class="form-control border-dark" required <%if(loggedIn&&user){%>
+          value="<%=user.birthday%>" readonly
+        <%}%>>
     </div>
 
     <div class="col-2 form-group">
@@ -94,6 +97,11 @@
     <div class="col-2 form-group">
       <label for="bloodType">Blood Type</label>
       <input type="text" name="bloodType" id="bloodType" class="form-control border-dark" required>
+    </div>
+
+    <div class="col-3 form-group">
+      <label for="nation_id" class="required">National ID</label>
+      <input type="number" name="national_id" id="national_id" class="form-control border-dark" required <%if(loggedIn&&user){%>value="<%=user.national_id%>" readonly<%}%>>
     </div>
 
     <div class="col-3 mt-3 align-self-center custom-control custom-checkbox">
@@ -330,7 +338,7 @@
     <div class="form-group col-8">
       <label for="medCert" class="required">Medical Certificate</label>
       <div class="custom-file">
-        <input type="file" class="custom-file-input" name="medCert" id="medCert" accept="application/pdf,image/jpeg,image/png" required>
+        <input type="file" class="custom-file-input" name="medCert" id="medCert" accept="image/jpeg,image/png" required>
         <label for="medCert" class="custom-file-label">Choose file</label>
       </div>
     </div>
@@ -339,7 +347,7 @@
       <label for="studentsPermit">Student's Permit <small class="text-black-50 font-italic">Must be issued within one
           (1) month and one (1) day</small></label>
       <div class="custom-file">
-        <input type="file" name="studentsPermit" id="studentsPermit" accept="application/pdf,image/jpeg,image/png"
+        <input type="file" name="studentsPermit" id="studentsPermit" accept="image/jpeg,image/png"
           class="custom-file-input">
         <label for="studentsPermit" class="custom-file-label">Choose file</label>
       </div>
@@ -347,6 +355,6 @@
   </div>
   <hr>
   <div class="row">
-    <button type="submit" class="btn btn-success ml-auto">Apply</button>
+    <button type="submit" class="btn btn-success ml-auto" id="apply">Apply</button>
   </div>
 </form>

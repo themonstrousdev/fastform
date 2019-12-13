@@ -1,0 +1,69 @@
+<form action="/add-user" method="post" enctype="multipart/form-data">
+    <div class="row mx-auto">
+        <div class="form-group col-3">
+            <label for="firstname" class="required">
+                First Name
+            </label>
+            <input type="text" name="firstname" id="firstname" class="form-control border-dark" placeholder="First Name"
+                required>
+        </div>
+
+        <div class="form-group col-3">
+            <label for="lastname" class="required">Last Name</label>
+            <input type="text" name="lastname" id="lastname" class="form-control border-dark" placeholder="Last Name"
+                required>
+        </div>
+
+        <div class="form-group col-3">
+            <label for="national_id " class="required">National ID</label>
+            <input type="number" name="national_id" id="national_id" class="form-control border-dark"
+                placeholder="00000000" required>
+        </div>
+    </div>
+
+    <div class="row mx-auto">
+        <div class="form-group col-3">
+            <label for="username" class="required">Username</label>
+            <input type="text" name="username" id="username" class="form-control border-dark" placeholder="Username"
+                required>
+        </div>
+        <div class="form-group col-3">
+            <label for="email" class="required">Email</label>
+            <input type="email" name="email" id="email" placeholder="email@mail.com" class="form-control border-dark"
+                required>
+            <% if (exist) { %>
+            <small class="text-danger font-italic">This email is already in use.</small>
+            <% } %>
+        </div>
+
+        <div class="form-group col-3">
+            <label for="birthday">Birth Date</label>
+            <input type="date" name="birthday" id="birthday" class="form-control border-dark" required>
+        </div>
+    </div>
+
+    <div class="row mx-auto">
+        <div class="form-group col-5">
+            <label for="password" class="required">Password</label>
+            <input type="password" name="password" id="password" pattern=".{8,12}" class="form-control border-dark">
+        </div>
+
+        <div class="form-group col-5">
+            <label for="confPassword" class="required">Confirm Password</label>
+            <input type="password" name="confPassword" id="confPassword" pattern=".{8,12}"
+                class="form-control border-dark">
+        </div>
+    </div>
+    <hr>
+    <div class="row mx-auto">
+        <br>
+        <div class="col-5 custom-control custom-checkbox">
+            <input type="checkbox" name="isAdmin" id="isAdmin" class="custom-control-input border-dark" value="admin">
+            <label for="isAdmin" class="custom-control-label">Admin Account <small class="text-black-50 font-italic">For testing purposes</small> </label>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <button type="submit" class="btn btn-success ml-auto" id="register">Register</button>
+    </div>
+</form>

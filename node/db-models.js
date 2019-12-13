@@ -1,12 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'),
+    bcrypt = require('bcrypt');
 var models = {};
 
 const ApplicationSchema = mongoose.Schema({
     dateSubmitted: {type: Date, default: Date.now, required: true},
     dateProcessed: {type: Date},
-    status: {type: String,default: "Pending"},
+    status: {type: String,default: "pending"},
     user_id: {type: String, default: 'guest'},
+    reason: {type: String},
     appInfo: {
+        national_id: {type: String, required: true},
+        application: {type: String, required: true},
         firstname: {type:String, required: true},
         lastname: {type:String, required: true},
         citizenship: {type:String, required: true},
@@ -28,14 +32,14 @@ const ApplicationSchema = mongoose.Schema({
         hair_color: {type:String, required: true},
         otherHair_input: {type:String},
         birthplace: {type:String, required: true},
-        fatherName: {type:String},
-        motherName: {type:String},
-        spouseName: {type:String},
-        business_name: {type:String},
+        fatherName: {type:String, default: "N/A"},
+        motherName: {type:String, default: "N/A"},
+        spouseName: {type:String, default: "N/A"},
+        business_name: {type:String, default: "N/A"},
         business_num: {type:Number},
-        business_add: {type:String},
+        business_add: {type:String, default: "N/A"},
         appType: {type:String},
-        medCert: {type: String, required: true},
+        medCert: {type: String},
         studentsPermit: {type: String}
     }
 });
@@ -46,6 +50,10 @@ const UserSchema = mongoose.Schema({
         required:true,
         unique:true
     },
+    username: {
+        type: String,
+        required: true
+    },
     firstname: {
         type:String,
         required:true
@@ -53,15 +61,6 @@ const UserSchema = mongoose.Schema({
     lastname: {
         type:String,
         required:true
-    },
-    gender: {
-        type:String,
-        required:true
-    },
-    contactNumber:{
-        type:String,
-        required:true,
-        unique:true
     },
     email:{
         type:String,
@@ -75,18 +74,41 @@ const UserSchema = mongoose.Schema({
         maxLengt:255
     },
     birthday:{
-        type:String,
+        type:Date,
         required:true
     },
-    age:{
-        type:Number,
-        required:true
-    },
-    isAdmin: Boolean
+    isAdmin: {type: Boolean, default: false}
 });
+
+const TaskSchema = mongoose.Schema({
+    done: {
+        type: Boolean,
+        defaut: false,
+    },
+    user_id: {
+        type: String,
+        required: true,
+    },
+    content: {
+        type: String,
+        required: true
+    }
+})
+
+UserSchema.pre('save', function (next) {
+    var user = this;
+    bcrypt.hash(user.password, 10, function (err, hash){
+      if (err) {
+        return next(err);
+      }
+      user.password = hash;
+      next();
+    })
+  });
 
 models.apps = mongoose.model('Application', ApplicationSchema);
 models.users = mongoose.model('User', UserSchema);
+models.tasks = mongoose.model('Task', TaskSchema);
 
 module.exports = models;
 

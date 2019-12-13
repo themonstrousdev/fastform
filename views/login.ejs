@@ -1,0 +1,29 @@
+<%- include("partial/header") %>
+<body class="bg-cusWhite">
+    <%- include("partial/purple-navbar") %>
+
+    <div class="container-fluid bg-cusWhite p-5">
+        <div class="container mx-auto  bg-light p-4 rounded-lg shadow w-35">
+            <h2 class="text-maroon text-center">Welcome Back</h2>
+            <% if (locals.wrongLogin && wrongLogin) { %>
+                <div class="alert alert-danger  mx-auto text-center" role="alert" style="width: fit-content">
+                    <small>Incorrect username or password! Please try again.</small>
+                </div>
+            <% } %>
+            <form action="/auth" method="post">
+                <div class="form-group col-auto w-85 mx-auto">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" class="form-control border-purple">
+                </div>
+                <div class="form-group col-auto w-85 mx-auto mb-5">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control border-purple">
+                </div>
+                <div class="form-group col-auto w-85 mx-auto">
+                    <input type="submit" value="Submit" class="btn btn-success w-100">
+                </div>
+            </form>
+        </div>
+    </div>
+
+<%- include("partial/footer") %>

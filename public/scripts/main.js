@@ -11,7 +11,7 @@ $("#hello").onchange = function() {
 $(document).ready(function(){
   
 
-  $("body").mCustomScrollbar({
+  $("body, #gallery").mCustomScrollbar({
     theme:"minimal",
     axis: "y"
   });
@@ -27,10 +27,10 @@ $(document).ready(function(){
     $(`.custom-file-label[for=${dest}]`).html(content);
   });
   
-  $("form button[type=submit]").click( async function(e){
+  $("#apply").click( async function(e){
     console.log("clicked!");
     var input = $("#contactNumber"),
-    num= input.val(),
+    num = input.val(),
     valid = await fetch(`http://apilayer.net/api/validate?access_key=83698416089a60ed337a058fd2bfd924&number=${num}&country_code=PH`)
     .then(res=>{
         return res.json();
@@ -54,6 +54,26 @@ $(document).ready(function(){
   
   });
 
+  $("#register").click(function(e) {
+    console.log("clicked!");
+    var pass = $("#password").val(),
+      confPass = $("#confPassword").val(),
+      res = true;
+
+      console.log(models);
+
+      if(pass != confPass) {
+        $("<small>", {
+          class: "text-danger font-italic",
+          html: "Passwords do not match"
+        }).appendTo($("#confPassword").parent());
+
+        res = false;
+      }
+
+      return res;
+  });
+
   $("input[name=appType]").change(function(){
     var val = $(this).val();
     if(val == "newApp") {
@@ -61,6 +81,26 @@ $(document).ready(function(){
     } else {
       $("#studentsPermit").parents('.requirement').hide();
     }
+  });
+
+  $(".reqImg").click(function(){
+    console.log("Clicked!");
+    var src = $(this).attr("src");
+    $("<div>", {
+      id: "gallery"
+    }).prependTo("body");
+
+    $("<div>", {
+      id: "gall-exit",
+      html: "&times;",
+      click: function() {
+        $("#gallery").remove();
+      }
+    }).appendTo("#gallery");
+
+    $("<img>", {
+      src: src
+    }).appendTo("#gallery");
   });
 
 });

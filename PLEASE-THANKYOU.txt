@@ -1,0 +1,7 @@
+If mongoDB compass exists, run fastform once then the database should exist once connected.
+ - Add a collectiong named, application and users.
+ - In applications, open the collection and click "Add Data", and select import file and JSON.
+ - Import application.json 
+ - Do the same thing for users
+
+If mongoDB compass does NOT exist, please make 2 user accounts and 1 admin account. Password must be 8 - 12 characters long and PLEASE REMEMBER THE PASSWORD BECAUSE IT GETS ENCRYPTED. Write it in README.md

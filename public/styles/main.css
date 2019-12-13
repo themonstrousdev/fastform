@@ -10,6 +10,11 @@
     src: url('/assets/fonts/Run-6YeWA.ttf') format('truetype')
 }
 
+@font-face {
+    font-family: 'Patua One';
+    src: url("/assets/fonts/patua-one.ttf") format('truetype');
+}
+
 :root {
     --dark-purple: #251727;
     --purple: #4e2e54;
@@ -161,6 +166,70 @@ body {
     text-decoration: line-through;
 }
 
+.W-5 {
+    width: 5% !important;
+}
+
+.w-10 {
+    width: 10% !important;
+}
+
+.w-15 {
+    width: 15% !important;
+}
+
+.w-20 {
+    width: 10% !important;
+}
+
+.w-30 {
+    width: 30% !important
+}
+
+.w-35 {
+    width: 35% !important
+}
+
+.w-40 {
+    width: 40% !important
+}
+
+.w-45 {
+    width: 45% !important
+}
+
+.w-55 {
+    width: 55% !important
+}
+
+.w-60 {
+    width: 60% !important
+}
+
+.w-65 {
+    width: 65% !important
+}
+
+.w-70 {
+    width: 70% !important
+}
+
+.w-80 {
+    width: 80% !important
+}
+
+.w-85 {
+    width: 85% !important
+}
+
+.w-90 {
+    width: 90% !important
+}
+
+.w-95 {
+    width: 95% !important
+}
+
 h1,
 h2,
 h3,
@@ -283,6 +352,10 @@ footer a:hover {
     opacity: .5;
 }
 
+.bg-purple .dropdown-item.disabled {
+    color: var(--peach)!important;
+}
+
 form#app {
     width: 80%;
 }
@@ -389,6 +462,65 @@ button#accountDrop {
     display: none;
 }
 
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.selected {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.btn-outline-primary.selected {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.accordion>.card:first-of-type:last-of-type {
+    border-bottom: 1px solid;
+}
+
+#gallery {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding: 5rem 0;
+    z-index: 999;
+}
+
+#gall-exit {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    font-size: 200%; 
+    font-weight: bolder; 
+    color: white;
+    cursor: pointer;
+    transition: all 200ms;
+    filter: brightness(100%);
+    z-index: 9999;
+}
+
+#gall-exit:hover {
+    color: var(--danger);
+    filter: brightness(200%);
+}
+
+.reqImg {
+    cursor: pointer;
+}
+
 /* custom inputs */
 
 input[type=number]::-webkit-inner-spin-button,
@@ -399,6 +531,18 @@ input[type=date]::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none;
     margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[name=national_id]::-webkit-outer-spin-button,
+input[name=national_id]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number][name=national_id] {
+  -moz-appearance:textfield;
 }
 
 .custom-control-label::before {

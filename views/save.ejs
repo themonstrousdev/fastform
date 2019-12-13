@@ -1,0 +1,45 @@
+<table class="table">
+        <tr>
+            <td scope="row">First Name</td>
+            <td><%= apps[i].appInfo.firstname %></td>
+            <td scope="row">Last Name</td>
+            <td><%= apps[i].appInfo.lastname %></td>
+        </tr>
+        <tr>
+            <td scope="row">Citizenship</td>
+            <td><%= apps[i].appInfo.citizenship %></td>
+            <td scope="row">Gender</td>
+            <!-- <td><%= (apps[i].appInfo.gender == "F") ? "Female" : "Male" %></td> -->
+        </tr>
+        <tr>
+            <td scope="row">Birthday</td>
+            <td>
+                <!-- <% var birth = new Date(apps[i].appInfo.birthday), birthString = birth.getMonth() + " "+birth.getDay()+", "+birth.getFullYear();%> -->
+                <%= birthString %>
+            </td>
+            <td scope="row">Height</td>
+            <td><%=apps[i].appInfo.height%>cm</td>
+        </tr>
+        <tr>
+            <td scope="row">Weight</td>
+            <td><%=apps[i].appInfo.weight%>kg</td>
+            <td scope="row">Contact Number</td>
+            <td><%=apps[i].appInfo.contactNo%></td>
+        </tr>
+        <tr>
+            <td scope="row">Current Address</td>
+            <td colspan="3"><%=apps[i].appInfo.street%>, <%=apps[i].appInfo.city_country%>, <%=apps[i].appInfo.zip%></td>
+            <td scope="row"></td>
+        </tr>
+        <tr>
+            <td scope="row">Blood Type</td>
+            <td><%=apps[i].appInfo.bloodType%></td>
+            <td scope="row">Organ Donor</td>
+            <td><%=apps[i].appInfo.organDonor%></td>
+        </tr>
+        <tr>
+            <td scope="row">Civil Status</td>
+            <td><%=apps[i].appInfo.civilStat%></td>
+            <td scope="row"></td>
+        </tr>
+    </table>

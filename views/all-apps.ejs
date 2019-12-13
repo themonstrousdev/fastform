@@ -1,0 +1,207 @@
+<%- include("partial/header") %>
+<% var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; %>
+
+<body class="bg-cusWhite">
+
+    <%- include("partial/header-admin") %>
+
+    <div class="container p-5" style="min-height: 60vh;">
+        <h2 class="text-maroon">Applications</h2>
+        <div class="row my-3">
+            <a href="/all-apps" class="btn btn-outline-primary mx-2 <%if(selected == 'all'){%>selected<%}%>">All</a>
+            <a href="/all-apps/pending" class="btn btn-outline-primary mx-2 <%if(selected == 'pending'){%>selected<%}%>">Pending</a>
+            <a href="/all-apps/approved" class="btn btn-outline-primary mx-2 <%if(selected == 'approved'){%>selected<%}%>">Approved</a>
+            <a href="/all-apps/rejected" class="btn btn-outline-primary mx-2 <%if(selected == 'rejected'){%>selected<%}%>">Rejected</a>
+        </div>
+
+        <div class="row">
+            <% if (apps && apps.length > 0) { %>
+            <div class=" accordion w-75" id="apps">
+                <% for(var i = 0; i < apps.length; ++i) { %>
+                <div class="card border-maroon w-100">
+                    <div class="card-header border-purple" id="appHead-<%= i %>">
+                        <button class="btn btn-link collapsed text-purple w-100 display-flex flex-row" type="button"
+                            data-toggle="collapse" data-target="#appDetails-<%= i %>" aria-expanded="true"
+                            aria-controls="#appDetails-<%= i %>">
+                            <div class="row align-items-center">
+                                <span class="font-weight-bold mr-2"><%= apps[i].appInfo.application %></span>
+                                <small class="text-black-50 font-italic">for <%= apps[i].appInfo.national_id %></small>
+                                <div class="badge badge-<%if(apps[i].status=='pending'){%>warning
+                                <%} else if(apps[i].status=='approved') {%>success
+                                <%} else if(apps[i].status=='rejected') {%>danger
+                                <%}%>
+                                 ml-auto"><%=apps[i].status%></div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="appDetails-<%= i %>" class="collapse" aria-labelledby="appHead-<%= i %>"
+                                    data-parent="#apps">
+                                    <div class="card-body p-3">
+                                        <div class="my-2">
+                                            <span class="font-weight-bold">Date Submitted:</span> <span>
+                                                <% var submit = new Date(apps[i].dateSubmitted);
+                                                    var submitString = months[submit.getMonth()] + " "+submit.getDate()+", "+submit.getFullYear();%>
+                                                <%= submitString %>
+                                            </span>
+                                        </div>
+                                        <table class="table">
+                                            <tr>
+                                                <th scope="row">First Name</th>
+                                                <td><%= apps[i].appInfo.firstname %></td>
+                                                <th scope="row">Last Name</th>
+                                                <td><%= apps[i].appInfo.lastname %></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Citizenship</th>
+                                                <td><%= apps[i].appInfo.citizenship %></td>
+                                                <th scope="row">Gender</th>
+                                                <td><%= (apps[i].appInfo.gender == "F") ? "Female" : "Male" %></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Birthday</th>
+                                                <td>
+                                                    <% var birth = new Date(apps[i].appInfo.birthday);
+                                                var birthString = months[birth.getMonth()] + " "+birth.getDate()+", "+birth.getFullYear();%>
+                                                    <%= birthString %>
+                                                </td>
+                                                <th scope="row">Height</th>
+                                                <td><%=apps[i].appInfo.height%>cm</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Weight</th>
+                                                <td><%=apps[i].appInfo.weight%>kg</td>
+                                                <th scope="row">Contact Number</th>
+                                                <td><%=apps[i].appInfo.contactNo%></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Current Address</td>
+                                                <td colspan="3"><%=apps[i].appInfo.street%>,
+                                                    <%=apps[i].appInfo.city_country%>,
+                                                    <%=apps[i].appInfo.zip%></td>
+                                                <th scope="row"></th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Blood Type</th>
+                                                <td><%=apps[i].appInfo.bloodType%></td>
+                                                <th scope="row">Organ Donor</th>
+                                                <td><%=apps[i].appInfo.organDonor%></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Civil Status</th>
+                                                <td><%=apps[i].appInfo.civilStat%></td>
+                                                <th scope="row">Build</th>
+                                                <td><%=apps[i].appInfo.build%></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Complexion</th>
+                                                <td><%=apps[i].appInfo.complex%></td>
+                                                <th scope="row">Eye Color</th>
+                                                <td><%=(apps[i].appInfo.eye_color == "Other") ? apps[i].appInfo.otherEyes_input : apps[i].appInfo.eye_color%>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Hair Color</th>
+                                                <td>
+                                                    <%=(apps[i].appInfo.hair_color == "Other") ? apps[i].appInfo.otherHair_input : apps[i].appInfo.hair_color%>
+                                                </td>
+                                                <th scope="row">BirthPlace</th>
+                                                <td><%=apps[i].appInfo.birthplace%></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Father's Name</th>
+                                                <td><%=apps[i].appInfo.fatherName%></td>
+                                                <th scope="row">Mother's Name</th>
+                                                <td><%=apps[i].appInfo.motherName%></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Spouse Name</th>
+                                                <td><%=apps[i].appInfo.spouseName%></td>
+                                                <th scope="row">Business Name</th>
+                                                <td><%=apps[i].appInfo.business_num%></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Business Address</th>
+                                                <td colspon="3"><%=apps[i].appInfo.business_add%></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Business Num</th>
+                                                <td><%=apps[i].appInfo.business_num%></td>
+                                                <th scope="row">Application Type</th>
+                                                <td><%=apps[i].appInfo.appType%></td>
+                                            </tr>
+                                        </table>
+                                        <div class="row">
+                                            <%if(apps[i].appInfo.medCert){%>
+                                            <img src="<%=apps[i].appInfo.medCert%>" alt="Medical Certificate"
+                                                class="img-thumbnail col-4 mx-2 reqImg">
+                                            <% } %>
+
+                                            <%if(apps[i].appInfo.studentsPermit){%>
+                                            <img src="<%=apps[i].appInfo.studentsPermit%>" alt="Students Permit"
+                                                class="img-thumbnail col-4 mx-2 reqImg">
+                                            <% } %>
+                                        </div>
+                                        <% if (apps[i].status == 'rejected') { %>
+                                            <hr>
+                                            <p>
+                                                <%=apps[i].reason%>
+                                            </p>
+                                        <%}%>
+                                        <hr>
+                                        <% if (apps[i].status == 'pending') { %>
+                                            <div class="row justify-content-around px-5">
+                                                    <button type="button" class="btn btn-danger col-4" data-toggle="modal"
+                                                        data-target="#reject-app-<%=i%>">Reject</button>
+        
+                                                    <div class="modal fade" id="reject-app-<%=i%>" tabindex="-1" role="dialog"
+                                                        aria-labelledby="modal-header-<%=i%>" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="modal-header-<%=i%>">Reject Application
+                                                                    </h5>
+                                                                    <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <form action="/app-action/reject" method="post">
+                                                                    <div class="modal-body">
+                                                                        <input type="text" name="app_id" class="hidden" value="<%=apps[i]._id%>">
+                                                                        <textarea name="reason" placeholder="Why do you reject this app?" class="form-control"></textarea required>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-danger">Reject</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                    <form action="/app-action/accept" method="POST" class="col-4">
+                                                        <input type="text" name="app_id" class="hidden"
+                                                            value="<%=apps[i]._id%>">
+                                                        <button type="submit" class="btn btn-success w-100">Approve</button>
+                                                    </form>
+                                                </div>
+                                        <%} else {%>
+                                            <form action="/app-action/pending" method="POST" class="col-4">
+                                                <input type="text" name="app_id" class="hidden"
+                                                    value="<%=apps[i]._id%>">
+                                                <button type="submit" class="btn btn-warning w-100 mx-auto">Revert to pending</button>
+                                            </form>
+                                        <%}%>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
+                    <% } else { %>
+                    <div class="mx-auto font-weight-bold">There are no applications.</div>
+                    <% } %>
+                </div>
+        </div>
+
+        <%- include("partial/footer") %>
